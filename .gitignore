@@ -6,3 +6,6 @@
 /node_modules
 /nbproject/private/
 /storage/
+/nbproject/
+.gitattributes
+.env.example
