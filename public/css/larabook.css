@@ -16,3 +16,21 @@ and open the template in the editor.
 .menu-haut{
     font-size: 20px!important;
 }
+footer{
+    padding-top: 10px;
+    color: #F5F5F5;
+    bottom: 0;
+    height: 60px;
+    position: absolute;
+    width: 100%;    
+    background: #5B4282;
+    text-align: center;
+}
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+body {
+    margin-bottom: 60px;
+}

@@ -20,18 +20,25 @@
 
 					<form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/register') }}">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
-
+                                                
 						<div class="form-group">
-							<label class="col-md-4 control-label">Name</label>
+							<label class="col-md-4 control-label">First name</label>
 							<div class="col-md-6">
-								<input type="text" class="form-control" name="name" value="{{ old('name') }}">
+								<input type="text" class="form-control" name="first_name" value="{{ old('first_name') }}">
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label class="col-md-4 control-label">E-Mail Address</label>
+							<label class="col-md-4 control-label">Last name</label>
 							<div class="col-md-6">
-								<input type="email" class="form-control" name="email" value="{{ old('email') }}">
+								<input type="text" class="form-control" name="last_name" value="{{ old('last_name') }}">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-4 control-label">Username</label>
+							<div class="col-md-6">
+								<input type="text" class="form-control" name="username" value="{{ old('username') }}">
 							</div>
 						</div>
 
@@ -46,6 +53,55 @@
 							<label class="col-md-4 control-label">Confirm Password</label>
 							<div class="col-md-6">
 								<input type="password" class="form-control" name="password_confirmation">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-4 control-label">E-Mail Address</label>
+							<div class="col-md-6">
+								<input type="text" class="form-control" name="email" value="{{ old('email') }}">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-4 control-label">Phone</label>
+							<div class="col-md-6">
+								<input type="text" class="form-control" name="phone">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-4 control-label">Billing address line 1</label>
+							<div class="col-md-6">
+								<input type="text" class="form-control" name="billing_address1">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-4 control-label">Billing address line 2</label>
+							<div class="col-md-6">
+								<input type="text" class="form-control" name="billing_address2">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-4 control-label">Zip code</label>
+							<div class="col-md-6">
+                                                            <input type="text" class="form-control" name="zip_code">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-4 control-label">City</label>
+							<div class="col-md-6">
+                                                            <input type="text" class="form-control" name="city">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-4 control-label">Country</label>
+							<div class="col-md-6">
+                                                            <input type="text" class="form-control" name="country">
 							</div>
 						</div>
 

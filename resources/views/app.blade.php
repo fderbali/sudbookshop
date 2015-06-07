@@ -39,6 +39,7 @@
 					<li><a href="{{ url('/') }}"><i class="fa fa-file-pdf-o menu-haut"></i>  PDF books  </a></li>
 					<li><a href="{{ url('/') }}"><i class="fa fa-usd menu-haut"></i>  Promotions  </a></li>
 					<li><a href="{{ url('/') }}"><i class="fa fa-plus-square-o menu-haut"></i>  Novelties  </a></li>
+                                        <li><a href="{{ url('/') }}"><i class="fa fa-shopping-cart menu-haut"></i>  Cart <span class="badge">0</span></a></li>                                        
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
@@ -47,7 +48,7 @@
 						<li><a href="{{ url('/auth/register') }}">Register</a></li>
 					@else
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->username }} <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="{{ url('/auth/logout') }}">Logout</a></li>
 							</ul>
@@ -57,11 +58,18 @@
 			</div>
 		</div>
 	</nav>
-
+        <?php 
+            //var_dump(Auth::user());
+        ?>
 	@yield('content')
 
 	<!-- Scripts -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <footer>
+            Fahmi Derbali <span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span> <?php echo date('Y'); ?>
+            <br />
+            Powered by Laravel
+        </footer>
 </body>
 </html>

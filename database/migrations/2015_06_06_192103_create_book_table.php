@@ -22,6 +22,7 @@ class CreateBookTable extends Migration {
 			$table->integer('in_stock');
 			$table->string('size', 45)->nullable();
 			$table->integer('category_id');
+			$table->boolean('is_pdf')->default(0);
 		});
 	}
 
