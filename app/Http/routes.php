@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'IndexController@index');
+Route::post('/newsletter', 'NewsletterController@postFormNewsletter');
 
 Route::get('home', 'HomeController@index');
 

@@ -18,12 +18,12 @@ and open the template in the editor.
 }
 footer{
     padding-top: 10px;
-    color: #F5F5F5;
+    color: #ffffff;
     bottom: 0;
     height: 60px;
     position: absolute;
     width: 100%;    
-    background: #5B4282;
+    background: #2E3138;
     text-align: center;
 }
 
@@ -33,4 +33,14 @@ html {
 }
 body {
     margin-bottom: 60px;
+}
+#maincontent{
+    padding: 15px;
+}
+
+#formnewsletter{
+    width:200px;
+}
+#sidebar{
+    /*background:#F5F5F5;*/
 }
