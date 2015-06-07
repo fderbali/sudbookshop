@@ -13,7 +13,7 @@
 
 Route::get('/', 'IndexController@index');
 Route::post('/newsletter', 'NewsletterController@postFormNewsletter');
-
+Route::get('/catalogue', 'CatalogueController@displaySections' );
 Route::get('home', 'HomeController@index');
 
 Route::controllers([

@@ -47,6 +47,7 @@
       I'll put on this page all features developed and finished.<br />
       So far, tehese features work already :<br />
       <ul>
+          <li>User registration and authentication</li>
           <li>Subsciption to the  newsletter</li>
       </ul> 
       
