@@ -13,7 +13,7 @@ class NewsletterController extends Controller {
             )
     {
         $newsletterRepository->save($request->all());
-        return Redirect::to('/')->with('subscibesuccess', 'Subscribed successfully');
+        return Redirect::to('/')->withSubscibesuccess('Subscribed successfully');
     }
 }
 
