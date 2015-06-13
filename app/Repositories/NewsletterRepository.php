@@ -3,7 +3,7 @@
 namespace App\Repositories;
 use App\Models\Newsletter;
 /**
- * Description of NewsletterRepository
+ * Data manager for newsletters
  *
  * @author Fahmi
  */

@@ -35,7 +35,7 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li><a href="{{ url('/') }}"><i class="fa fa-home menu-haut"></i>  Home</a></li>
-					<li><a href="{{ url('/') }}"><i class="fa fa-book menu-haut"></i>  Catalogue  </a></li>
+					<li><a href="{{ url('/catalogue') }}"><i class="fa fa-book menu-haut"></i>  Catalogue  </a></li>
 					<li><a href="{{ url('/') }}"><i class="fa fa-file-pdf-o menu-haut"></i>  PDF books  </a></li>
 					<li><a href="{{ url('/') }}"><i class="fa fa-usd menu-haut"></i>  Promotions  </a></li>
 					<li><a href="{{ url('/') }}"><i class="fa fa-plus-square-o menu-haut"></i>  Novelties  </a></li>
