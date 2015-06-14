@@ -8,4 +8,5 @@ namespace App\Repositories;
  */
 interface SectionRepositoryInterface {
     public function getPaginate($nb);
+    public function getCategoriesBySection($section_id);
 }

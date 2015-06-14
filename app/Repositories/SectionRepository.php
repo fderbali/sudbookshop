@@ -16,4 +16,8 @@ class SectionRepository implements SectionRepositoryInterface{
     public function getPaginate($nb) {
         return $this->section->paginate($nb);
     }
+    
+    public function getCategoriesBySection($section_id) {
+        return $this->section->findOrFail($section_id)->categories;
+    }
 }

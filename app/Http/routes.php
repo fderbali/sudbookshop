@@ -10,10 +10,14 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+//Catalogue :
+Route::get('/catalogue', 'CatalogueController@displaySections' );
+Route::get('/catalogue/section/{section_id}', 'CatalogueController@displayCategories' )->where('section_id', '[0-9]+');;
+
+
 
 Route::get('/', 'IndexController@index');
 Route::post('/newsletter', 'NewsletterController@postFormNewsletter');
-Route::get('/catalogue', 'CatalogueController@displaySections' );
 Route::get('home', 'HomeController@index');
 
 Route::controllers([

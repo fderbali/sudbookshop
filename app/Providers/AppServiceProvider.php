@@ -34,6 +34,9 @@ class AppServiceProvider extends ServiceProvider {
                 $this->app->bind(
                         'App\Repositories\SectionRepositoryInterface', 
                         'App\Repositories\SectionRepository');
+                $this->app->bind(
+                        'App\Repositories\CategoryRepositoryInterface', 
+                        'App\Repositories\CategoryRepository');
 	}
 
 }
