@@ -11,7 +11,7 @@ class Category extends Model {
 
 	public function books()
 	{
-		return $this->hasMany('App\Book', 'category_id');
+		return $this->hasMany('App\Models\Book', 'category_id');
 	}
 
 	public function section()

@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,12 +11,12 @@ class Book extends Model {
 
 	public function category()
 	{
-		return $this->belongsTo('App\Category', 'category_id');
+		return $this->belongsTo('App\Models\Category', 'category_id');
 	}
 
 	public function promotions()
 	{
-		return $this->belongsToMany('App\Promotion', 'promo_book');
+		return $this->belongsToMany('App\Models\Promotion', 'promo_book');
 	}
 
 }

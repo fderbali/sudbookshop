@@ -9,5 +9,7 @@
     <ul>
       <li>User registration and authentication</li>
       <li>Subsciption to the  newsletter</li>
+      <li>Display Sections</li>
+      <li>Loading Categories related to a section by ajax and displayng them using jQuery animation</li>
     </ul>
 @endsection

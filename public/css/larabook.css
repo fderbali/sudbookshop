@@ -73,3 +73,22 @@ body {
     text-decoration: none;
     width: 200px;
 }
+.listing_books{
+    margin-bottom: 20px;
+}
+.moreinfosbutton{
+    margin-left:40px
+}
+ul, ol {
+    list-style: outside none none;
+}
+.headtitle{
+    margin-bottom: 20px;
+}
+.addtocart{
+    margin-bottom:30px;
+}
+.quantity{
+    width:45px;
+    margin-left:5px;
+}

@@ -16,4 +16,8 @@ class CategoryRepository implements CategoryRepositoryInterface{
     public function getBooksByCategory($category_id) {
         return $this->category->findOrFail($category_id)->books;
     }
+    
+    public function getCategoryName($category_id) {
+        return $this->category->findOrFail($category_id)->name;
+    }
 }

@@ -16,10 +16,9 @@
             }
             else{
                 if(!(divlinks.is(":empty"))){
-                    divlinks.show();divlinks.animate({"margin-left":"50px"},400);console.log('je passe ici 1');
+                    divlinks.show();divlinks.animate({"margin-left":"50px"},400);
                 }
                 else{
-                    console.log('je passe ici 2');
                     section_id = $(this).data("section_id");
                     $.ajax({
                         method: "GET",
@@ -28,7 +27,7 @@
                     .done(function(data) {
                         categories = JSON.parse(data);
                         for(var key in categories){
-                            link = '<a href="">'+categories[key].name+'</a>';
+                            link = '<a href="catalogue/category/'+categories[key].id+'">'+categories[key].name+'</a>';
                             divlinks.append(link);
                         }
                         divlinks.show();divlinks.animate({"margin-left":"50px"},400)                    

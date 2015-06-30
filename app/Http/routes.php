@@ -12,8 +12,9 @@
 */
 //Catalogue :
 Route::get('/catalogue', 'CatalogueController@displaySections' );
-Route::get('/catalogue/section/{section_id}', 'CatalogueController@displayCategories' )->where('section_id', '[0-9]+');;
-
+Route::get('/catalogue/section/{section_id}', 'CatalogueController@displayCategories' )->where('section_id', '[0-9]+');
+Route::get('/catalogue/category/{category_id}', 'CatalogueController@displayBooks' )->where('category_id', '[0-9]+');
+Route::get('/catalogue/book/{book_id}', 'CatalogueController@displayBook' )->where('book_id', '[0-9]+');
 
 
 Route::get('/', 'IndexController@index');
