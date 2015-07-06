@@ -32,23 +32,42 @@
         <img src="{{ asset("/images/ajouter_au_panier.png") }}"/>
     </div>    
 </div>
-        <!--div class="row listing_books">
-            <div class="col-md-2">
-                <a class="thumbnail" href="{{ $book->id }}">
-                    <img width="120" src="{{ asset("/images/".$book->isbn.".jpg") }}"/>
-                </a>
-            </div>
-            <div class="col-md-10">
-                <ul>
-                    <li>Title : <b>{{ $book->title }}</b></li>
-                    <li>Author : {{ $book->author }}</li>
-                    <li>Price : {{ $book->price }}</li>
-                    <li>Short description : {{ $book->brief_description }}</li>
-                </ul>
-                <a class="btn btn-success moreinfosbutton" role="button" href="{{ $book->id }}"> More infos...</a>
-            </div>
-        </div>
-        <br /-->
+<br />
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Overview</a></li>
+    <li><a href="#tabs-2">Further information</a></li>
+    <li><a href="#tabs-3">Downloads</a></li>
+  </ul>
+  <div id="tabs-1">
+    <p>{{ $book->full_description }}</p>
+  </div>
+  <div id="tabs-2">
+    <p>ISBN : {{ $book->isbn }}</p>
+    <p>Shipping fees :
+        @if($book->is_pdf == 0)
+            0 $
+        @else
+            {{ $book->shipping_cost }}
+        @endif
+    </p>
+    <p>Category : {{ $book->category->name }}</p>
+  </div>
+  <div id="tabs-3">
+    <p>
+        @if($book->additional_docs == 0)
+            No downloads for this book
+        @else
+        <a href="{{ asset("/zip/".$book->isbn.".zip") }}"><img width="60" src="{{ asset("/images/rar.png") }}"/></a>
+        @endif
+    </p>
+  </div>
+</div>
+<script>
+    $(document).ready(function(){
+       $("#tabs").tabs({fx:{opacity: 'toggle'}}); 
+    });
+</script>
 @endsection
 
 
