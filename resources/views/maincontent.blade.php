@@ -9,6 +9,9 @@
             {{ Session::get('subscibesuccess') }}
         </div>
         @endif
+        <fieldset>
+            <legend>Newsletter</legend>
+        
         {!! Form::open(array('url' => '/newsletter', 'method' => 'POST')) !!}
             <div class="form-group {!! $errors->has('first_name') ? 'has-error' : '' !!}">
                     <label>{!! Form::label('first_name', 'First name:') !!}</label>
@@ -35,6 +38,7 @@
             </div> 
             {!! Form::submit('Envoyer !', array('class' => 'btn btn-info')) !!}
         {!! Form::close() !!} 
+        </fieldset>
         </div>
         <!--end newsletter-->
     </div><!-- /#sidebar -->  
