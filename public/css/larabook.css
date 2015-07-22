@@ -92,3 +92,6 @@ ul, ol {
     width:45px;
     margin-left:5px;
 }
+.ui-effects-transfer{
+    border :1px #00b3ee solid;
+}

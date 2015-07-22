@@ -39,10 +39,10 @@
 				<ul class="nav navbar-nav">
 					<li><a href="{{ url('/') }}"><i class="fa fa-home menu-haut"></i>  Home</a></li>
 					<li><a href="{{ url('/catalogue') }}"><i class="fa fa-book menu-haut"></i>  Catalogue  </a></li>
-					<li><a href="{{ url('/') }}"><i class="fa fa-file-pdf-o menu-haut"></i>  PDF books  </a></li>
+					<!--li><a href="{{ url('/') }}"><i class="fa fa-file-pdf-o menu-haut"></i>  PDF books  </a></li-->
 					<li><a href="{{ url('/') }}"><i class="fa fa-usd menu-haut"></i>  Promotions  </a></li>
 					<li><a href="{{ url('/') }}"><i class="fa fa-plus-square-o menu-haut"></i>  Novelties  </a></li>
-                                        <li><a href="{{ url('/') }}"><i class="fa fa-shopping-cart menu-haut"></i>  Cart <span class="badge">0</span></a></li>                                        
+                                        <li id="shoppingcart"><a href="{{ url('/') }}"><i class="fa fa-shopping-cart menu-haut"></i>  Cart <span class="badge">0</span></a></li>                                        
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">

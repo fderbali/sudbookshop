@@ -9,7 +9,7 @@
             @if($book->is_pdf == "0")
                 Paper book
             @else
-                PDF ({{ $book->size }})
+                <i class="fa fa-file-pdf-o menu-haut"></i> ({{ $book->size }})
             @endif
         </p>
         <img width="120" src="{{ asset("/images/".$book->isbn.".jpg") }}" longdesc="{{ asset("/images/zoom/".$book->isbn."-zoom.jpg") }}"/>
@@ -27,7 +27,7 @@
         <br />
     </div>
     <div class="col-md-3">
-        <button type="button" class="btn btn-success addtocart">Add to cart</button>
+        <button type="button" data-isbn="{{ $book->isbn }}" class="btn btn-success addtocart">Add to cart</button>
         <br />
         <img src="{{ asset("/images/ajouter_au_panier.png") }}"/>
     </div>    
@@ -67,6 +67,23 @@
     $(document).ready(function(){
        $("#tabs").tabs({fx:{opacity: 'toggle'}}); 
     });
+    
+    $(".addtocart").click(function(){
+        $.ajax({
+          method: "GET",
+          url: "{{ route('additemtocart', ['isbn' => 'hsbvkjsvbfkjv', 'quantity'=>4]) }}",
+        })
+        .done(function( msg ) {
+            if(msg=="ok"){
+                transfer_to_cart();
+            }
+        });
+    });
+    
+    function transfer_to_cart() {
+        options = { to: "#shoppingcart", className: "ui-effects-transfer" };
+        $(".addtocart").effect( "transfer", options, 500 );
+    };    
 </script>
 @endsection
 
