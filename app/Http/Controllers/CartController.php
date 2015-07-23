@@ -1,13 +1,14 @@
 <?php namespace App\Http\Controllers;
 
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Session;
-
-use Illuminate\Http\Request;
+use Request;
 
 class CartController extends Controller {
-    public function addToCart($isbn, $quantity) {
+    public function addToCart() {
+        $isbn = Request::input('isbn');
+        $quantity = Request::input('quantity');
+        $total_books = 0;
         if(Session::has('cart')){
             $cart = Session::get('cart');
             $added = false;
@@ -18,17 +19,20 @@ class CartController extends Controller {
                     $cart[$isbn] = $qty;
                     $added = true;
                 }
+                $total_books+=$cart[$i];
             }
             Session::put('cart',$cart);
             if(!$added){
                 $cart[$isbn] = $quantity;
+                $total_books+=$quantity;
                 Session::put('cart',$cart);
             }            
         }
         else {
             $cart[$isbn] = $quantity;
+            $total_books+=$quantity;
             Session::put('cart',$cart);
         }
-        print_r(Session::get('cart'));
+        echo($total_books);
     }
 }

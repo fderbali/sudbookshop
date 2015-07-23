@@ -42,7 +42,7 @@
 					<!--li><a href="{{ url('/') }}"><i class="fa fa-file-pdf-o menu-haut"></i>  PDF books  </a></li-->
 					<li><a href="{{ url('/') }}"><i class="fa fa-usd menu-haut"></i>  Promotions  </a></li>
 					<li><a href="{{ url('/') }}"><i class="fa fa-plus-square-o menu-haut"></i>  Novelties  </a></li>
-                                        <li id="shoppingcart"><a href="{{ url('/') }}"><i class="fa fa-shopping-cart menu-haut"></i>  Cart <span class="badge">0</span></a></li>                                        
+                                        <li id="shoppingcart"><a href="{{ url('/') }}"><i class="fa fa-shopping-cart menu-haut"></i>  Cart <span id="nb_items" class="badge">0</span></a></li>                                        
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">

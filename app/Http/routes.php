@@ -17,9 +17,9 @@ Route::get('/catalogue/category/{category_id}', 'CatalogueController@displayBook
 Route::get('/catalogue/book/{book_id}', 'CatalogueController@displayBook' )->where(['book_id' => '[0-9]+']);
 
 //Shopping Cart :
-Route::get('/cart/add/{isbn}/{quantity}', [
+Route::get('/cart/add', [
     'as' => 'additemtocart', 'uses' => 'CartController@addToCart'
-])->where(['isbn' => '[0-9a-zA-Z\-]+', 'quantity'=>'[0-9]+']);
+]);
 
 Route::get('/', 'IndexController@index');
 Route::post('/newsletter', 'NewsletterController@postFormNewsletter');

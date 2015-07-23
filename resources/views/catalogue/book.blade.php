@@ -65,25 +65,33 @@
 </div>
 <script>
     $(document).ready(function(){
-       $("#tabs").tabs({fx:{opacity: 'toggle'}}); 
+       $("#tabs").tabs({fx:{opacity: 'toggle'}});
+       update_mini_cart()
     });
     
     $(".addtocart").click(function(){
+        isbn = $(this).data("isbn");
+        quantity = $(".quantity").val();
+        update_mini_cart(isbn,quantity)
+        transfer_to_cart();
+    });
+    
+    function update_mini_cart(isbn, quantity){
         $.ajax({
           method: "GET",
-          url: "{{ route('additemtocart', ['isbn' => 'hsbvkjsvbfkjv', 'quantity'=>4]) }}",
+          url: "{{ route('additemtocart') }}",
+          data: { isbn: isbn, quantity: quantity }
         })
         .done(function( msg ) {
-            if(msg=="ok"){
-                transfer_to_cart();
-            }
-        });
-    });
+            $("#nb_items").html(msg);
+        });        
+    }
     
     function transfer_to_cart() {
         options = { to: "#shoppingcart", className: "ui-effects-transfer" };
-        $(".addtocart").effect( "transfer", options, 500 );
-    };    
+        $(".addtocart").effect( "transfer", options, 600 );
+    };
+    
 </script>
 @endsection
 
