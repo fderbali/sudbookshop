@@ -70,6 +70,29 @@
     });
     
     $(".addtocart").click(function(){
+        quantity_available = $(".quantity").attr("max");
+        if(quantity_available < $(".quantity").val()){
+            
+            swal({
+              title: "Error!",
+              text: "This quantity is unavailable !",
+              type: "error",
+              confirmButtonText: "OK"
+            }); 
+            
+            return;
+        }
+        if( $(".quantity").val() == "" ){
+            
+            swal({
+              title: "Error!",
+              text: "Please select a quantity !",
+              type: "error",
+              confirmButtonText: "OK"
+            }); 
+
+            return;
+        }
         isbn = $(this).data("isbn");
         quantity = $(".quantity").val();
         update_mini_cart(isbn,quantity)
