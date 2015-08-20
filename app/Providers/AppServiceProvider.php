@@ -40,6 +40,9 @@ class AppServiceProvider extends ServiceProvider {
                 $this->app->bind(
                         'App\Repositories\BookRepositoryInterface', 
                         'App\Repositories\BookRepository');
+                $this->app->bind(
+                        'App\Processors\ShoppingCartInterface', 
+                        'App\Processors\ShoppingCart');
 	}
 
 }

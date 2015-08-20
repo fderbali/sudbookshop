@@ -22,7 +22,7 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>  
-	<script src="{{ asset('/js/sweetalert.min.js') }}"></script>        
+	<script src="{{ asset('/js/sweetalert.min.js') }}"></script>       
 </head>
 <body>
 	<nav class="navbar navbar-inverse">
@@ -44,7 +44,7 @@
 					<!--li><a href="{{ url('/') }}"><i class="fa fa-file-pdf-o menu-haut"></i>  PDF books  </a></li-->
 					<li><a href="{{ url('/') }}"><i class="fa fa-usd menu-haut"></i>  Promotions  </a></li>
 					<li><a href="{{ url('/') }}"><i class="fa fa-plus-square-o menu-haut"></i>  Novelties  </a></li>
-                                        <li id="shoppingcart"><a href="{{ url('/') }}"><i class="fa fa-shopping-cart menu-haut"></i>  Cart <span id="nb_items" class="badge">0</span></a></li>                                        
+                                        <li id="shoppingcart"><a href="{{ route('showcart') }}"><i class="fa fa-shopping-cart menu-haut"></i>  Cart <span id="nb_items" class="badge"> {{ $total_books or 0 }} </span></a></li>                                        
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">

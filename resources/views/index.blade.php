@@ -13,5 +13,7 @@
       <li>- Loading Categories related to a section by ajax and displayng them using jQuery animation</li>
       <li>- Display books of a given category</li>
       <li>- Display book details</li>
+      <li>- Add book to cart</li>
+      
     </ul>
 @endsection

@@ -20,6 +20,9 @@ Route::get('/catalogue/book/{book_id}', 'CatalogueController@displayBook' )->whe
 Route::get('/cart/add', [
     'as' => 'additemtocart', 'uses' => 'CartController@addToCart'
 ]);
+Route::get('/cart/show', [
+    'as' => 'showcart', 'uses' => 'CartController@showCart'
+]);
 
 Route::get('/', 'IndexController@index');
 Route::post('/newsletter', 'NewsletterController@postFormNewsletter');

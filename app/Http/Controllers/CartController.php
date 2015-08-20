@@ -1,38 +1,19 @@
 <?php namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Processors\ShoppingCartInterface;
 use Session;
-use Request;
 
 class CartController extends Controller {
-    public function addToCart() {
-        $isbn = Request::input('isbn');
-        $quantity = Request::input('quantity');
-        $total_books = 0;
-        if(Session::has('cart')){
-            $cart = Session::get('cart');
-            $added = false;
-            foreach ($cart as $i=>$qty)
-            {
-                if($i == $isbn){
-                    $qty += $quantity;
-                    $cart[$isbn] = $qty;
-                    $added = true;
-                }
-                $total_books+=$cart[$i];
-            }
-            Session::put('cart',$cart);
-            if(!$added){
-                $cart[$isbn] = $quantity;
-                $total_books+=$quantity;
-                Session::put('cart',$cart);
-            }            
-        }
-        else {
-            $cart[$isbn] = $quantity;
-            $total_books+=$quantity;
-            Session::put('cart',$cart);
-        }
-        echo($total_books);
+    public function addToCart(ShoppingCartInterface $shoppingCart) {
+        echo $shoppingCart->addTocart();
+    }
+    public function showCart(ShoppingCartInterface $shoppingCart){
+        $shopping_cart_infos = $shoppingCart->getShoppingCartInfos();
+        $sub_totals = $shopping_cart_infos[0];
+        $books_in_cart = $shopping_cart_infos[1];
+        $total = $shopping_cart_infos[2];
+        $cart = Session::get('cart');
+        return view('cart/shopping_cart', compact('books_in_cart','sub_totals','total','cart'));
     }
 }

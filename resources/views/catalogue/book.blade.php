@@ -66,7 +66,6 @@
 <script>
     $(document).ready(function(){
        $("#tabs").tabs({fx:{opacity: 'toggle'}});
-       update_mini_cart()
     });
     
     $(".addtocart").click(function(){
@@ -82,7 +81,7 @@
             
             return;
         }
-        if( $(".quantity").val() == "" ){
+        if( $(".quantity").val() == "" || $(".quantity").val() == 0 ){
             
             swal({
               title: "Error!",
