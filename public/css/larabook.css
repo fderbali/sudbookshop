@@ -74,7 +74,14 @@ body {
     width: 200px;
 }
 .listing_books{
-    margin-bottom: 20px;
+    position:relative;
+}
+.listing_books .property {
+    position: relative;
+    top: 45px;
+}
+.fixed_height{
+    height: 120px!important;
 }
 .moreinfosbutton{
     margin-left:40px

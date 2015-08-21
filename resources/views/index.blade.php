@@ -14,6 +14,6 @@
       <li>- Display books of a given category</li>
       <li>- Display book details</li>
       <li>- Add book to cart</li>
-      
+      <li>- Show items in cart, subtotals and total</li>
     </ul>
 @endsection
