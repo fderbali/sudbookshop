@@ -76,9 +76,12 @@ body {
 .listing_books{
     position:relative;
 }
+.item-shopping-cart, .totals{
+    text-align: center;
+}
 .listing_books .property {
     position: relative;
-    top: 45px;
+    top: 35px;
 }
 .fixed_height{
     height: 120px!important;
@@ -101,4 +104,8 @@ ul, ol {
 }
 .ui-effects-transfer{
     border :1px #00b3ee solid;
+}
+.hidden-input{
+    display: none;
+    margin-bottom: 5px;
 }

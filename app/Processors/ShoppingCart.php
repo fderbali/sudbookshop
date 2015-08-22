@@ -20,7 +20,9 @@ class ShoppingCart implements ShoppingCartInterface {
             $cart = Session::get('cart');
             $list_quantities=$cart;
             foreach ($cart as $isbn => $quantity){
-                $list_isbn[]=$isbn;
+                if($quantity > 0){
+                    $list_isbn[]=$isbn;
+                }
             }
         }
         $this->isbns = $list_isbn;
@@ -37,7 +39,10 @@ class ShoppingCart implements ShoppingCartInterface {
             foreach ($cart as $i=>$qty)
             {
                 if($i == $isbn){
-                    $qty += $quantity;
+                    if(Request::input('type'))
+                        $qty = $quantity;
+                    else
+                        $qty += $quantity;
                     $cart[$isbn] = $qty;
                     $added = true;
                 }

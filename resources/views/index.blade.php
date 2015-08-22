@@ -15,5 +15,6 @@
       <li>- Display book details</li>
       <li>- Add book to cart</li>
       <li>- Show items in cart, subtotals and total</li>
+      <li>- Modify quantities in cart, subtotals and total will follow automaticly</li>
     </ul>
 @endsection
