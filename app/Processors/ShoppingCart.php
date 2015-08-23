@@ -68,7 +68,7 @@ class ShoppingCart implements ShoppingCartInterface {
         $total = 0;
         $books_in_cart = Book::whereIn('isbn', $this->isbns)->get();
         foreach ($books_in_cart as $book){
-            $sub_totals[$book->isbn]=$book->price * $this->quantities[$book->isbn];
+            $sub_totals[$book->isbn]=$book->price * $this->quantities[$book->isbn] + $book->shipping_cost * $this->quantities[$book->isbn];
             $total += $sub_totals[$book->isbn];
         }
         return[$sub_totals, $books_in_cart, $total];

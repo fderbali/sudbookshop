@@ -81,7 +81,7 @@ body {
 }
 .listing_books .property {
     position: relative;
-    top: 35px;
+    top: 20px;
 }
 .fixed_height{
     height: 120px!important;
@@ -108,4 +108,7 @@ ul, ol {
 .hidden-input{
     display: none;
     margin-bottom: 5px;
+}
+.delete-item{
+    margin-top: 5px;
 }
