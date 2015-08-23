@@ -36,13 +36,6 @@
 						</div>
 
 						<div class="form-group">
-							<label class="col-md-4 control-label">Username</label>
-							<div class="col-md-6">
-								<input type="text" class="form-control" name="username" value="{{ old('username') }}">
-							</div>
-						</div>
-
-						<div class="form-group">
 							<label class="col-md-4 control-label">Password</label>
 							<div class="col-md-6">
                                                             <input type="password" class="form-control" name="password" value="{{ old('password') }}">

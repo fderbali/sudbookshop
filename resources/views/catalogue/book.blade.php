@@ -27,7 +27,7 @@
         <br />
     </div>
     <div class="col-md-3">
-        <button type="button" data-isbn="{{ $book->isbn }}" class="btn btn-success addtocart">Add to cart</button>
+        <button type="button" data-isbn="{{ $book->isbn }}" class="btn btn-success addtocart">Add to cart <i class="fa fa-cart-arrow-down"></i></button>
         <br />
         <img src="{{ asset("/images/ajouter_au_panier.png") }}"/>
     </div>    

@@ -39,5 +39,5 @@ Route::controllers([
 
 //Checkout
 Route::get('/checkout', [
-    'as' => 'checkout', 'uses' => 'CartController@addToCart'
+    'as' => 'checkout', 'uses' => 'CheckoutController@checkout'
 ]);
