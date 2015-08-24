@@ -112,3 +112,13 @@ ul, ol {
 .delete-item{
     margin-top: 5px;
 }
+.shipping_address{
+    margin-bottom: 10px;
+}
+#addresses input{
+    position: relative;
+    top: 1px;    
+}
+#form-new-address{
+    display: none;
+}

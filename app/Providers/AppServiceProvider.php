@@ -38,11 +38,17 @@ class AppServiceProvider extends ServiceProvider {
                         'App\Repositories\CategoryRepositoryInterface', 
                         'App\Repositories\CategoryRepository');
                 $this->app->bind(
+                        'App\Repositories\ShippingAddressRepositoryInterface', 
+                        'App\Repositories\ShippingAddressRepository');
+                $this->app->bind(
                         'App\Repositories\BookRepositoryInterface', 
                         'App\Repositories\BookRepository');
                 $this->app->bind(
                         'App\Processors\ShoppingCartInterface', 
                         'App\Processors\ShoppingCart');
+                $this->app->bind(
+                        'App\Processors\CheckoutInterface', 
+                        'App\Processors\Checkout');
 	}
 
 }

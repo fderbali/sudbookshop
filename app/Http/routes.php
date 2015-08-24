@@ -41,3 +41,6 @@ Route::controllers([
 Route::get('/checkout', [
     'as' => 'checkout', 'uses' => 'CheckoutController@checkout'
 ]);
+Route::get('/checkout/save_new_address', [
+    'as' => 'save_new_address', 'uses' => 'CheckoutController@saveNewShippingAddress'
+]);

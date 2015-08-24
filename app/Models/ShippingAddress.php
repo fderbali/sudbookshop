@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,7 +11,6 @@ class ShippingAddress extends Model {
 
 	public function order()
 	{
-		return $this->belongsToMany('App\Order', 'shipping_adress_order');
+            return $this->belongsToMany('App\Order', 'shipping_adress_order');
 	}
-
 }
