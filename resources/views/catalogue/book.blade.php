@@ -63,33 +63,30 @@
     </p>
   </div>
 </div>
-<script>
+<script type="text/javascript">
     $(document).ready(function(){
        $("#tabs").tabs({fx:{opacity: 'toggle'}});
     });
     
     $(".addtocart").click(function(){
-        quantity_available = $(".quantity").attr("max");
-        if(quantity_available < $(".quantity").val()){
-            
+        quantity_available = parseInt($(".quantity").attr("max"));
+        quantity = parseInt($(".quantity").val());
+        if(quantity_available < quantity){
             swal({
               title: "Error!",
               text: "This quantity is unavailable !",
               type: "error",
               confirmButtonText: "OK"
             }); 
-            
             return;
         }
         if( $(".quantity").val() == "" || $(".quantity").val() == 0 ){
-            
             swal({
               title: "Error!",
               text: "Please select a quantity !",
               type: "error",
               confirmButtonText: "OK"
             }); 
-
             return;
         }
         isbn = $(this).data("isbn");
